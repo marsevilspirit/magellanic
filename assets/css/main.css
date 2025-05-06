@@ -16,7 +16,44 @@ footer {
   margin-top: 1rem;
 }
 
+/* Represents the hyperlink element (anchor element) in HTML. */
 a {
   color: #00e;
   text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+nav, footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  padding-inline-start: 0px;
+}
+
+nav li {
+  flex: 1; /* 每个列表项等分可用空间 */
+  text-align: center; /* 文本居中 */
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
 }

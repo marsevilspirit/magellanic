@@ -1,5 +1,10 @@
+name = 'magellanic'
+author = 'marsevilspirit'
 baseURL = 'https://example.org/'
+description = ''
 languageCode = 'en-US'
+license = 'MIT'
+licenselink = "https://github.com/marsevilspirit/magellanic/blob/main/LICENSE"
 title = 'My New Hugo Site'
 
 [menus]
@@ -14,8 +19,8 @@ title = 'My New Hugo Site'
     weight = 20
 
   [[menus.main]]
-    name = 'Tags'
-    pageRef = '/tags'
+    name = 'About'
+    pageRef = '/about'
     weight = 30
 
 [module]
