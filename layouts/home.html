@@ -1,9 +1,16 @@
 {{ define "main" }}
+
   {{ .Content }}
+
+  <!-- posts list -->
+  <div class="posts-list">
+  <h1>Latest Posts:</h1>
   {{ range site.RegularPages }}
     <!-- check if posts -->
     {{ if eq .Type "posts" }}
-      <h2 class="posts-list"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
     {{ end }}
   {{ end }}
+  </div>
+
 {{ end }}
