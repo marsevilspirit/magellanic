@@ -1,5 +1,6 @@
 body {
-  color: #222;
+  color: $color;
+  background-color: $background-color;
   font-family: Futura;
   line-height: 1.5;
   margin: 0;
@@ -7,6 +8,8 @@ body {
 }
 
 h1, h2, h3 {
+  color: $color;
+  background-color: $background-color;
   font-family: Futura;
   font-style: italic;
   font-weight: bold;

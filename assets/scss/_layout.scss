@@ -5,8 +5,8 @@
 }
 
 nav, footer {
-  background-color: #333;
-  color: #fff;
+  background-color: $nav-footer-background-color;
+  color: $nav-footer-color;
   text-align: center;
 }
 
@@ -18,17 +18,4 @@ header {
 footer {
   border-top: 1px solid #222;
   margin-top: 1rem;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-nav a {
-  flex: 1;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  padding: 1rem;
 }

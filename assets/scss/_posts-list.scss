@@ -8,10 +8,5 @@
 .posts-list a {
   color: #333;
   // remove underline
-  text-decoration: none;
-}
-
-.posts-list a:hover {
-  // Add underline on mouse hover
   text-decoration: underline;
 }
