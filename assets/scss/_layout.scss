@@ -1,0 +1,46 @@
+.container {
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 0 20px;
+}
+
+nav, footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+header {
+  border-bottom: 1px solid #222;
+  margin-bottom: 1rem;
+}
+
+footer {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  padding-inline-start: 0px;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+}
