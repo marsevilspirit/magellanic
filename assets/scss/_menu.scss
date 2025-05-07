@@ -1,21 +1,21 @@
-nav.menu {
+.menu {
   background-color: #333;
   padding: 0 20px;
 }
 
-nav.menu ul {
+.menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-nav.menu li {
+.menu li {
   flex: 1;
   text-align: center;
 }
 
-nav.menu a {
+.menu a {
   color: #fff;
   text-decoration: none;
   padding: 0px 20px;

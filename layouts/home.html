@@ -1,7 +1,9 @@
 {{ define "main" }}
   {{ .Content }}
   {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+    <!-- check if posts -->
+    {{ if eq .Type "posts" }}
+      <h2 class="posts-list"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ end }}
   {{ end }}
 {{ end }}

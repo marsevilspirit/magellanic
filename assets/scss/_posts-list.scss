@@ -1,0 +1,17 @@
+.posts-list {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.posts-list a {
+  color: #333;
+  // remove underline
+  text-decoration: none;
+}
+
+.posts-list a:hover {
+  // Add underline on mouse hover
+  text-decoration: underline;
+}
