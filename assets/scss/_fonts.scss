@@ -5,5 +5,13 @@
   font-display: auto;
   font-style:  normal;
   font-weight: normal;
-  src: url("../fonts/Futura Book font.ttf") format("truetype"),
+  src: url("../fonts/Futura Book font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Futura';
+  font-display: auto;
+  font-style:  italic;
+  font-weight: bold;
+  src: url("../fonts/Futura Bold Italic font.ttf") format("truetype");
 }
