@@ -1,18 +1,3 @@
 <h1>{{ site.Title }}</h1>
-<!-- This line lists all the sections, like about, post, home... -->
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-
-<!-- for example: -->
-  <!-- <nav> -->
-  <!--   <ul> -->
-  <!--   <li> -->
-  <!--     <a aria-current="page" class="active" href="/">Home</a> -->
-  <!--   </li> -->
-  <!--   <li> -->
-  <!--     <a href="/posts/">Posts</a> -->
-  <!--   </li> -->
-  <!--   <li> -->
-  <!--     <a>About</a> -->
-  <!--   </li> -->
-  <!--   </ul> -->
-  <!-- </nav> -->
+<!-- This line lists all the sections, like about, posts, home... -->
+{{ partial "menu.html" . }}
