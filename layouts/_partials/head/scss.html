@@ -1,4 +1,5 @@
-{{- with resources.Get "css/main.css" }}
+<!-- toCSS make SCSS to CSS -->
+{{- with resources.Get "scss/main.scss" | toCSS }}
   {{- if hugo.IsDevelopment }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}
