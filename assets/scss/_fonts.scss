@@ -2,16 +2,29 @@
 
 @font-face {
   font-family: 'Futura';
-  font-display: auto;
   font-style:  normal;
   font-weight: normal;
-  src: url("../fonts/Futura Book font.ttf") format("truetype");
+  src: url("../fonts/Futura/Futura Book font.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'Futura';
-  font-display: auto;
+  font-style:  normal;
+  font-weight: bold;
+  src: url("../fonts/Futura/Futura Heavy font.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: 'Futura';
   font-style:  italic;
   font-weight: bold;
-  src: url("../fonts/Futura Bold Italic font.ttf") format("truetype");
+  src: url("../fonts/Futura/Futura Heavy Italic font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Futura';
+  font-style:  italic;
+  font-weight: normal;
+  src: url("../fonts/Futura/Futura Book Italic font.ttf") format("truetype");
 }
