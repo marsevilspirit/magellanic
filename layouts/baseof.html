@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-
-  <head>
-    {{ partial "head.html" . }}
-  </head>
+  {{ partial "head.html" . }}
 
   <body>
     <div class="container">
@@ -13,10 +10,7 @@
         {{ block "main" . }}{{ end }}
       </div>
 
-      <footer>
-        {{ partial "footer.html" . }}
-      </footer>
+      {{ partial "footer.html" . }}
     </div>
   </body>
-
 </html>
