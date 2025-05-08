@@ -24,4 +24,4 @@ title = 'My New Hugo Site'
     min = '0.146.0'
 
 [Params]
-  logo = "marsevilspirit's blog"
+  logo = "logo"
