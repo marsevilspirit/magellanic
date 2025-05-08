@@ -1,16 +1,17 @@
 {{ define "main" }}
-
-  {{ .Content }}
-
-  <!-- posts list -->
-  <div class="posts-list">
-  <h2>Latest Posts:</h2>
-  {{ range site.RegularPages }}
-    <!-- check if posts -->
-    {{ if eq .Type "posts" }}
-      <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-    {{ end }}
-  {{ end }}
-  </div>
-
+  <main role="main">
+    <div class="home-page">
+      {{ .Content }}
+      <!-- posts list -->
+      <div class="posts-list">
+        <h2>Latest Posts:</h2>
+        {{ range site.RegularPages }}
+          <!-- check if posts -->
+          {{ if eq .Type "posts" }}
+            <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </main>
 {{ end }}

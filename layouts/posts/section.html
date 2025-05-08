@@ -1,9 +1,9 @@
 {{ define "main" }}
-
-  <div class="posts-list">
-  {{ range .Pages }}
-    <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-  {{ end }}
-  <div>
-
+  <main>
+    <div class="posts-list">
+      {{ range .Pages }}
+        <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+      {{ end }}
+    <div>
+  </main>
 {{ end }}

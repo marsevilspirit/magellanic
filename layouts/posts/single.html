@@ -1,5 +1,6 @@
 {{ define "main"}}
-<article class="post">
+<main class="post">
+  <article>
 
   <header>
     <h2>{{ .Title }}</h2>
@@ -13,5 +14,6 @@
   {{ $dateHuman := .Date | time.Format ":date_long" }}
   <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
-</article>
+  </article>
+</main>
 {{ end }}

@@ -14,9 +14,14 @@ body {
   background-color: $background-color;
 }
 
-nav, footer {
-  background-color: $nav-footer-background-color;
-  color: $nav-footer-color;
+main {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav {
+  color: $nav-color;
+  background-color: $nav-background-color;
   text-align: center;
 }
 
@@ -40,10 +45,14 @@ a {
   text-align: center;
 }
 
+
 .content {
   display: flex;
   flex-direction: column;
   flex: 1 auto;
   align-items: center;
   margin: 0;
+  align-items: stretch;
+  padding-left: 10px;
+  padding-right: 10px;
 }

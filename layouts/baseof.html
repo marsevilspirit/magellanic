@@ -8,22 +8,18 @@
 <body>
 
   <div class="container">
-
     <!-- TODO: page-header -->
     <header class="page-header">
       {{ partial "header.html" . }}
     </header>
 
     <div class="content">
-      <main>
         {{ block "main" . }}{{ end }}
-      </main>
     </div>
 
     <footer>
       {{ partial "footer.html" . }}
     </footer>
- 
   </div>
 
 </body>
