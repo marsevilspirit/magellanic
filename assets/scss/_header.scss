@@ -1,0 +1,19 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  // Default
+  background: $header-background-color;
+  z-index: 5;
+
+  &__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 960px;
+	max-width: 100%;
+  }
+}

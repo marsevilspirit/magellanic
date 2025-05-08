@@ -9,13 +9,16 @@
 
   <div class="container">
 
-    <header>
+    <!-- TODO: page-header -->
+    <header class="page-header">
       {{ partial "header.html" . }}
     </header>
 
-    <main>
-      {{ block "main" . }}{{ end }}
-    </main>
+    <div class="content">
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
 
     <footer>
       {{ partial "footer.html" . }}
