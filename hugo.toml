@@ -25,3 +25,4 @@ title = 'My New Hugo Site'
 
 [Params]
   logo = "logo"
+  DataFormatList = "2006-01-02"
