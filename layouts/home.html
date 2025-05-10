@@ -2,16 +2,23 @@
   <main role="main">
     <div class="home-page">
       {{ .Content }}
+
+      <h2>Latest Posts:</h2>
       <!-- posts list -->
-      <div class="posts-list">
-        <h2>Latest Posts:</h2>
-        {{ range site.RegularPages }}
-          <!-- check if posts -->
-          {{ if eq .Type "posts" }}
-            <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-          {{ end }}
-        {{ end }}
-      </div>
+      {{ range first 5 (where site.RegularPages "Type" "posts") }}
+        <div class="post on-list" onclick="location.href='{{ .Permalink }}'">
+          <div class="post-row">
+            <h3>
+              <a href="{{ .Permalink }}">{{- with .Draft }}<strong>DRAFT: &nbsp;</strong>{{ end -}}{{ .Title | markdownify }}</a>
+              {{- with .Date -}}
+                <small>{{ .Format ($.Site.Params.DateFormatList | default "2006-01-02") }}</small>
+              {{- end -}}
+            </h3>
+            <div class="post-meta">
+            </div>
+          </div>
+        </div>
+      {{ end }}
     </div>
   </main>
 {{ end }}
