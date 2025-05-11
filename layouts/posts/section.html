@@ -2,17 +2,28 @@
   {{ $paginator := .Paginate .Data.Pages }}
 
   <main class="posts">
-    <div class="posts-page">
+    <div class="content">
       {{ .Content }}
-
-      {{ range $paginator.Pages.GroupByDate "2006" }}
-        <h2>{{ .Key }}</h2>
-        <div class="posts-list">
-          {{ range .Pages }}
-            <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-          {{ end }}
-        </div>
-      {{ end }}
     </div>
+
+    {{ range $paginator.Pages.GroupByDate "2006" }}
+      <div class="posts-group main-wrapper">
+        <div class="main-box">
+          <h2>{{ .Key }}</h2>
+          <ul class="posts-list">
+            {{ range .Pages }}
+              <li class="post-item">
+                <a href="{{ .RelPermalink }}">
+                  <span class="post-title">{{- with .Draft }}<strong>DRAFT: &nbsp;</strong>{{ end -}}{{ .Title }}</span>
+                  <span class="post-day">
+                    {{ .Date.Format "Jan 2" }}
+                  </span>
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    {{ end }}
   </main>
 {{ end }}

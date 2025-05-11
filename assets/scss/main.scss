@@ -3,8 +3,9 @@
 @import 'prism';
 
 @import 'variables';
-@import 'base';
+@import "mixins";
 @import 'fonts';
+@import 'base';
 
 @import 'logo';
 @import 'header';
