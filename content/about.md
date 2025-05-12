@@ -4,5 +4,5 @@ draft = false
 title = 'About'
 +++
 
-Hi, my name is marsevilspirit. I’m a programmer, a geek, and a loyal supporter of Arch Linux and Neovim. On this website, I will share what I am learning and my achievements.
-
+This is about Page.
+You can write something here.
