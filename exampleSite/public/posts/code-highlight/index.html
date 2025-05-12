@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Code Highlight | marsevilspirit&#39;s blog</title>
+  
+    <link rel="stylesheet" href="/scss/main.css">
+
+  
+      <script src="/js/main.js"></script>
+
+</head>
+
+
+  <body>
+    <div class="container">
+      <header class="page-header">
+  <span class="page-header__inner">
+    <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        marsevilspirit&#39;s blog
+    </div>
+</a>
+
+
+    <span class="page-header__right">
+      
+      <nav class="menu">
+    <ul>
+        
+            <li>
+                <a href="/posts/">
+                    /posts
+                </a>
+            </li>
+        
+            <li>
+                <a href="/about/">
+                    /about
+                </a>
+            </li>
+        
+    </ul>
+</nav>
+
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+<main class="post">
+  <article>
+    <header>
+      <h1>Code Highlight</h1>
+    </header>
+    <section class="body">
+      <p>Make sure all the code blocks highlighted correctly. All the code samples are come from the demo of <a href="https://highlightjs.org">https://highlightjs.org</a></p>
+<!-- more -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">#[derive(Debug)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">State</span> {
+</span></span><span style="display:flex;"><span>    Start,
+</span></span><span style="display:flex;"><span>    Transient,
+</span></span><span style="display:flex;"><span>    Closed,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">impl</span> From<span style="color:#f92672">&lt;&amp;</span><span style="color:#a6e22e">&#39;a</span> <span style="color:#66d9ef">str</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">for</span> State {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">from</span>(s: <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">&#39;a</span> <span style="color:#66d9ef">str</span>) -&gt; <span style="color:#a6e22e">Self</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">match</span> s {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;start&#34;</span> <span style="color:#f92672">=&gt;</span> State::Start,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;closed&#34;</span> <span style="color:#f92672">=&gt;</span> State::Closed,
+</span></span><span style="display:flex;"><span>            _ <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">unreachable!</span>(),
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;apples&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;count&#34;</span>: [<span style="color:#ae81ff">12000</span>, <span style="color:#ae81ff">20000</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;description&#34;</span>: {<span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;...&#34;</span>, <span style="color:#f92672">&#34;sensitive&#34;</span>: <span style="color:#66d9ef">false</span>}
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;oranges&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;count&#34;</span>: [<span style="color:#ae81ff">17500</span>, <span style="color:#66d9ef">null</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;description&#34;</span>: {<span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;...&#34;</span>, <span style="color:#f92672">&#34;sensitive&#34;</span>: <span style="color:#66d9ef">false</span>}
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@requires_authorization</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">somefunc</span>(param1<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>, param2<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&#39;&#39;A docstring&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> param1 <span style="color:#f92672">&gt;</span> param2: <span style="color:#75715e"># interesting</span>
+</span></span><span style="display:flex;"><span>        print <span style="color:#e6db74">&#39;Gre</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">ater&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (param2 <span style="color:#f92672">-</span> param1 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0b10</span>l) <span style="color:#f92672">or</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SomeClass</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> message <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;&#39;interpreter
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">... prompt&#39;&#39;&#39;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">title</span>&gt;Title&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;<span style="color:#f92672">body</span> {<span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">500</span><span style="color:#66d9ef">px</span>;}&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/javascript&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">$init</span>() {<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">checked</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;title&#39;</span>&gt;Title&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- here goes the rest of the page --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">$initHighlight</span>(<span style="color:#a6e22e">block</span>, <span style="color:#a6e22e">cls</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">cls</span>.<span style="color:#a6e22e">search</span>(<span style="color:#e6db74">/\bno\-highlight\b/</span>) <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">process</span>(<span style="color:#a6e22e">block</span>, <span style="color:#66d9ef">true</span>, <span style="color:#ae81ff">0x0F</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#e6db74">` class=&#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">cls</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;`</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* handle exception */</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">classes</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">checkCondition</span>(<span style="color:#a6e22e">classes</span>[<span style="color:#a6e22e">i</span>]) <span style="color:#f92672">===</span> <span style="color:#66d9ef">undefined</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;undefined&#39;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">web</span><span style="color:#f92672">-</span><span style="color:#a6e22e">component</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">block</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/web-component&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#a6e22e">$initHighlight</span>;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[]) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* An annoying &#34;Hello World&#34; example */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0xFFFF</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Hello, World!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\n&#39;</span>;
+</span></span><span style="display:flex;"><span>  unordered_map <span style="color:#f92672">&lt;</span>string, vector<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;</span> m;
+</span></span><span style="display:flex;"><span>  m[<span style="color:#e6db74">&#34;key&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\\\\</span><span style="color:#e6db74">&#34;</span>; <span style="color:#75715e">// this is an error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">2e3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">12l</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;topic&#34;</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;id&#34;</span> serial <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;forum_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;subject&#34;</span> varchar(<span style="color:#ae81ff">255</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;topic&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> forum_id <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#e6db74">&#34;forum_id&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">REFERENCES</span> <span style="color:#e6db74">&#34;forum&#34;</span> (<span style="color:#e6db74">&#34;id&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Initials
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> <span style="color:#e6db74">&#34;topic&#34;</span> (<span style="color:#e6db74">&#34;forum_id&#34;</span>, <span style="color:#e6db74">&#34;subject&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">values</span> (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;D&#39;&#39;artagnian&#39;</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objectivec" data-lang="objectivec"><span style="display:flex;"><span><span style="color:#75715e">#import &lt;UIKit/UIKit.h&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#import &#34;Dependency.h&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@protocol</span> <span style="color:#a6e22e">WorldDataSource</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@optional</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span> (NSString<span style="color:#f92672">*</span>)worldName;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@required</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span> (<span style="color:#66d9ef">BOOL</span>)allowsToLive;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@property</span> (<span style="color:#66d9ef">nonatomic</span>, <span style="color:#66d9ef">readonly</span>) NSString <span style="color:#f92672">*</span>title;
+</span></span><span style="display:flex;"><span>- (<span style="color:#66d9ef">IBAction</span>) <span style="color:#a6e22e">show</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@end</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @author John Smith &lt;john.smith@example.com&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">package</span> l2f.gameserver.model;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">L2Char</span> <span style="color:#66d9ef">extends</span> L2Object {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> Short ERROR <span style="color:#f92672">=</span> 0x0001;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">moveTo</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y, <span style="color:#66d9ef">int</span> z) {
+</span></span><span style="display:flex;"><span>    _ai <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>    log(<span style="color:#e6db74">&#34;Should not be called&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (1 <span style="color:#f92672">&gt;</span> 5) { <span style="color:#75715e">// wtf!?</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Foundation</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">@objc</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>: Entity {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> name: String!
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> age:  Int!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">init</span>(name: String, age: Int) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* /* ... */ */</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Return a descriptive string for this person</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">description</span>(offset: Int = <span style="color:#ae81ff">0</span>) -&gt; String {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>age <span style="color:#f92672">+</span> offset<span style="color:#e6db74">)</span><span style="color:#e6db74"> years old&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#66d9ef">font-face</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#f92672">Chunkfive</span><span style="color:#f92672">;</span> <span style="color:#f92672">src</span><span style="color:#f92672">:</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Chunkfive.otf&#39;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">usertext</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#F0F0F0</span>; <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#600</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-family</span>: Chunkfive, sans;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#f92672">print</span>.<span style="color:#a6e22e">css</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">media</span> <span style="color:#f92672">print</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">a</span><span style="color:#f92672">[</span><span style="color:#f92672">href</span><span style="color:#f92672">^=</span><span style="color:#f92672">http</span><span style="color:#f92672">]</span>::<span style="color:#a6e22e">after</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">content</span>: attr(href)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># The Greeter class</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Greeter</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(name)
+</span></span><span style="display:flex;"><span>    @name <span style="color:#f92672">=</span> name<span style="color:#f92672">.</span>capitalize
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">salute</span>
+</span></span><span style="display:flex;"><span>    puts <span style="color:#e6db74">&#34;Hello </span><span style="color:#e6db74">#{</span>@name<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>g <span style="color:#f92672">=</span> <span style="color:#66d9ef">Greeter</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#34;world&#34;</span>)
+</span></span><span style="display:flex;"><span>g<span style="color:#f92672">.</span>salute
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-makefile" data-lang="makefile"><span style="display:flex;"><span><span style="color:#75715e"># Makefile
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>BUILDDIR      <span style="color:#f92672">=</span> _build
+</span></span><span style="display:flex;"><span>EXTRAS       <span style="color:#f92672">?=</span> <span style="color:#66d9ef">$(</span>BUILDDIR<span style="color:#66d9ef">)</span>/extras
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">.PHONY</span><span style="color:#f92672">:</span> main clean
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	@echo <span style="color:#e6db74">&#34;Building main facility...&#34;</span>
+</span></span><span style="display:flex;"><span>	build_main <span style="color:#66d9ef">$(</span>BUILDDIR<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">clean</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	rm -rf <span style="color:#66d9ef">$(</span>BUILDDIR<span style="color:#66d9ef">)</span>/*
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ch</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">float64</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ch</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1.0e10</span>    <span style="color:#75715e">// magic number</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ch</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">`exitting now\`</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">go</span> println(len(<span style="color:#e6db74">&#34;hello world!&#34;</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">###### CONFIG</span>
+</span></span><span style="display:flex;"><span>ACCEPTED_HOSTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/root/.hag_accepted.conf&#34;</span>
+</span></span><span style="display:flex;"><span>BE_VERBOSE<span style="color:#f92672">=</span>false
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$UID<span style="color:#e6db74">&#34;</span> -ne <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;Superuser rights required&#34;</span>
+</span></span><span style="display:flex;"><span>  exit <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>genApacheConf<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>  echo -e <span style="color:#e6db74">&#34;# Host </span><span style="color:#e6db74">${</span>HOME_DIR<span style="color:#e6db74">}</span>$1<span style="color:#e6db74">/</span>$2<span style="color:#e6db74"> :&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#75715e">; boilerplate</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[package]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;some_name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">authors</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">[&#34;Author&#34;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;This is \</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">a description&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[[lib]]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">${NAME}</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">default</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">auto</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">no</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">counter</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">1_000</span>
+</span></span></code></pre></div>
+    </section>
+    
+    
+    <time datetime="2025-05-07T21:16:05&#43;08:00">May 7, 2025</time>
+  </article>
+</main>
+
+      </div>
+
+      <footer>
+  <small>©2025 All Rights Reserved</small>
+</footer>
+
+    </div>
+  </body>
+</html>

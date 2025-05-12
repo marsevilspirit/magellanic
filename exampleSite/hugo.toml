@@ -1,0 +1,21 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = "marsevilspirit's blog"
+theme = 'magellanic'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menus]
+  [[menus.main]]
+    name = 'posts'
+    pageRef = '/posts'
+    weight = 1
+
+  [[menus.main]]
+    name = 'about'
+    pageRef = '/about'
+    weight = 2
+
+[Params]
+  logo = "marsevilspirit's blog"
