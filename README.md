@@ -6,6 +6,10 @@ if you want to see the example, run:
 $ hugo server -s exampleSite/ --gc --themesDir=../..
 ```
 
+### why call magellanic
+
+Inspired by the Magellanic Cloud, the thought just suddenly came to me, devoid of any particular significance.
+
 ### Via Module
 
 You can add this theme as a Hugo module instead of a git submodule.
