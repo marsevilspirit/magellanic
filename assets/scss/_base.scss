@@ -31,6 +31,25 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px; /* Add a small gap between items */
+}
+
+footer li {
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  padding: 0px 10px;
+  display: block;
+}
+
 main {
     padding-left: 10px;
     padding-right: 10px;

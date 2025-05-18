@@ -1,27 +1,27 @@
-name = 'magellanic'
-author = 'marsevilspirit'
-baseURL = 'https://example.org/'
-description = ''
-languageCode = 'en-US'
-license = 'MIT'
+name = "magellanic"
+author = "marsevilspirit"
+baseURL = "https://example.org/"
+description = ""
+languageCode = "en-US"
+license = "MIT"
 licenselink = "https://github.com/marsevilspirit/magellanic/blob/main/LICENSE"
-title = 'My New Hugo Site'
+title = "My New Hugo Site"
 
 [menus]
   [[menus.main]]
-    name = 'posts'
-    pageRef = '/posts'
+    name = "posts"
+    pageRef = "/posts"
     weight = 1
 
   [[menus.main]]
-    name = 'about'
-    pageRef = '/about'
+    name = "about"
+    pageRef = "/about"
     weight = 2
 
 [module]
   [module.hugoVersion]
     extended = false
-    min = '0.146.0'
+    min = "0.146.0"
 
 [Params]
   logo = "logo"
