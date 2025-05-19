@@ -7,8 +7,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -17,7 +17,7 @@ body {
   background-color: $background-color;
   margin: 0;
   padding: 0;
-  font-family: Futura;
+  font-family: 'Futura', sans-serif;
   font-size: 1.2rem;
   line-height: 1.54;
   display: flex;
@@ -29,34 +29,9 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Footer Styles */
-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 5px; /* Add a small gap between items */
-}
-
-footer li {
-  text-align: center;
-}
-
-footer a {
-  text-decoration: none;
-  padding: 0px 10px;
-  display: block;
-}
-
-/* Main Content Styles */
-main {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
+/* Typography */
 h1, h2, h3 {
-  font-family: Futura;
+  font-family: 'Futura', sans-serif;
   font-style: italic;
   font-weight: bold;
 }
@@ -69,8 +44,10 @@ h2, h3, h4, h5, h6 {
 
 a {
   color: $color;
+  text-decoration: none;
 }
 
+/* Image Handling */
 img {
   display: block;
   max-width: 100%;
@@ -96,10 +73,11 @@ img {
 }
 
 .center img {
-  display:block;
-  margin:auto;
+  display: block;
+  margin: auto;
 }
 
+/* Layout */
 .container {
   flex: 1 auto;
   display: flex;
@@ -114,6 +92,32 @@ img {
   flex: 1 auto;
   margin: 0;
   align-items: stretch;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Footer Styles */
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+footer li {
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  padding: 0 10px;
+  display: block;
+}
+
+/* Main Content Styles */
+main {
   padding-left: 10px;
   padding-right: 10px;
 }

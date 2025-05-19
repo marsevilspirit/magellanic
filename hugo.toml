@@ -1,7 +1,7 @@
 name = "magellanic"
 author = "marsevilspirit"
 baseURL = "https://example.org/"
-description = ""
+description = "marsevilspirit's blog"
 languageCode = "en-US"
 license = "MIT"
 licenselink = "https://github.com/marsevilspirit/magellanic/blob/main/LICENSE"
@@ -25,7 +25,7 @@ title = "My New Hugo Site"
 
 [Params]
   logo = "logo"
-  DataFormatList = "2006-01-02"
+  DateFormatList = "2006-01-02"
 
   [[Params.social]]
     name = "github"

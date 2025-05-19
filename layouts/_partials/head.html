@@ -1,17 +1,18 @@
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
 
-  <!-- Links to Font Awesome CSS files for icons -->
-  <!-- https://docs.fontawesome.com/web/add-icons/how-to -->
-  <link href="/fontawesome-6.7.2/css/fontawesome.min.css" rel="stylesheet" />
-  <link href="/fontawesome-6.7.2/css/brands.min.css" rel="stylesheet" />
-  <link href="/fontawesome-6.7.2/css/solid.min.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="/fontawesome-6.7.2/css/fontawesome.min.css" rel="stylesheet">
+  <link href="/fontawesome-6.7.2/css/brands.min.css" rel="stylesheet">
+  <link href="/fontawesome-6.7.2/css/solid.min.css" rel="stylesheet">
 
-  <!-- for favicons -->
+  <!-- Favicons -->
   {{ partial "favicons.html" . }}
 
+  <!-- Styles and Scripts -->
   {{ partial "head/scss.html" . }}
   {{ partial "head/js.html" . }}
 </head>

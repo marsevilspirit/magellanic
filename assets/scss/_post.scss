@@ -2,17 +2,29 @@
   width: 100%;
   max-width: 1000px;
   text-align: left;
-  padding: 20px;
+  padding: 10px;
   padding-top: 0;
   margin: 20px auto;
   background-color: $header-background-color;
-}
 
-.post.on-list {
-  background: $header-background-color;
-  cursor: pointer;
-  margin: 0;
-  border-bottom: 1px black dashed;
+  &.on-list {
+    background: $header-background-color;
+    cursor: pointer;
+    margin: 0;
+    border-bottom: 1px black dashed;
+  }
+
+  &-row {
+    display: flex;
+
+    &:first-of-type {
+      padding-top: 10px;
+    }
+  }
+
+  &-meta {
+    display: inline-block;
+  }
 }
 
 .post.on-list h3 {
@@ -26,16 +38,4 @@
 .post.on-list small {
   margin-left: auto;
   font-weight: lighter;
-}
-
-.post-row {
-  display: flex;
-}
-
-.post-row:first-of-type {
-    padding-top: 10px
-}
-
-.post-meta {
-  display: inline-block;
 }

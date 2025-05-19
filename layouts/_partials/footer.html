@@ -4,9 +4,8 @@
       {{- with .Site.Params.social }}
         {{ partial "social-icons.html" . }}
       {{- end }}
-      <li><a href="{{ "posts/index.xml" | absLangURL }}" target="_blank" title="rss" class="icon fa-solid fa-rss"></a></li>
+      <li><a href="{{ "posts/index.xml" | absLangURL }}" target="_blank" title="RSS Feed" class="icon fa-solid fa-rss"></a></li>
     </ul>
   </div>
-  <small>©{{ now.Year }} All Rights Reserved</small>
-  <!-- Footer section for copyright information -->
+  <small>© {{ now.Year }} All Rights Reserved</small>
 </footer>

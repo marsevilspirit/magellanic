@@ -1,5 +1,9 @@
-/* Must be loaded before everything else */
-/* Global Resets */
+/*
+  Main SCSS File
+  This file imports all component styles
+*/
+
+/* Base Styles */
 @import 'normalize';
 @import 'prism';
 

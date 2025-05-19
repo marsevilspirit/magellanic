@@ -1,15 +1,30 @@
-{{ define "main"}}
+{{ define "main" }}
 <main class="post">
   <article>
     <header>
       <h1>{{ .Title }}</h1>
     </header>
+
     <section class="body">
       {{.Content}}
     </section>
-    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-    {{ $dateHuman := .Date | time.Format ":date_long" }}
-    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+
+    <footer>
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format ":date_long" }}
+      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      
+      {{ with .Params.tags }}
+        <div class="post-tags">
+          <span>Tags:</span>
+          <ul>
+            {{ range . }}
+              <li><a href="{{ "tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+    </footer>
   </article>
 </main>
 {{ end }}
