@@ -1,6 +1,6 @@
 # magellanic
 
-example website: blog.marsevilspirit.com
+example website: [blog](https://blog.marsevilspirit.com)
 
 if you want to see the example, run:
 
