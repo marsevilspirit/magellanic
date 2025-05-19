@@ -29,4 +29,4 @@ title = "My New Hugo Site"
 
   [[Params.social]]
     name = "github"
-    url = "https://github.com/marsevilspirit"
+    url = "https://github.com"
