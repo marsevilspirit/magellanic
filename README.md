@@ -1,5 +1,7 @@
 # magellanic
 
+example website: blog.marsevilspirit.com
+
 if you want to see the example, run:
 
 ```sh

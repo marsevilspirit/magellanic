@@ -7,6 +7,11 @@ license = "MIT"
 licenselink = "https://github.com/marsevilspirit/magellanic/blob/main/LICENSE"
 title = "My New Hugo Site"
 
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.146.0"
+
 [menus]
   [[menus.main]]
     name = "posts"
@@ -18,11 +23,10 @@ title = "My New Hugo Site"
     pageRef = "/about"
     weight = 2
 
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.146.0"
-
 [Params]
   logo = "logo"
   DataFormatList = "2006-01-02"
+
+  [[Params.social]]
+    name = "github"
+    url = "https://github.com/marsevilspirit"

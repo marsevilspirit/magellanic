@@ -2,7 +2,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+  <!-- Links to Font Awesome CSS files for icons -->
+  <!-- https://docs.fontawesome.com/web/add-icons/how-to -->
+  <link href="/fontawesome-6.7.2/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="/fontawesome-6.7.2/css/brands.min.css" rel="stylesheet" />
+  <link href="/fontawesome-6.7.2/css/solid.min.css" rel="stylesheet" />
+
+  <!-- for favicons -->
   {{ partial "favicons.html" . }}
+
   {{ partial "head/scss.html" . }}
   {{ partial "head/js.html" . }}
 </head>

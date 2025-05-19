@@ -1,12 +1,12 @@
 <footer>
-  <ul>
-    <li>
-      <a href="/posts/index.xml">/rss</a>
-    </li>
-    <li>
-      <a href="https://github.com/marsevilspirit">/github</a>
-    </li>
-  </ul>
+  <div class="footer__inner">
+    <ul class="icons">
+      {{- with .Site.Params.social }}
+        {{ partial "social-icons.html" . }}
+      {{- end }}
+      <li><a href="{{ "posts/index.xml" | absLangURL }}" target="_blank" title="rss" class="icon fa-solid fa-rss"></a></li>
+    </ul>
+  </div>
   <small>©{{ now.Year }} All Rights Reserved</small>
   <!-- Footer section for copyright information -->
 </footer>
