@@ -1,17 +1,26 @@
 /* Must be loaded before everything else */
+/* Global Resets */
 @import 'normalize';
 @import 'prism';
 
+/* Variables and Mixins */
 @import 'variables';
-@import "mixins";
+@import 'mixins';
+
+/* Typography */
 @import 'fonts';
+
+/* Base Styles */
 @import 'base';
 
+/* Components */
 @import 'logo';
 @import 'header';
 @import 'menu';
+@import 'footer';
+
+/* Pages */
 @import 'home';
 @import 'about';
-@import 'posts';
+@import 'archive';
 @import 'post';
-@import 'footer';

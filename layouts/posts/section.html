@@ -1,16 +1,14 @@
 {{ define "main" }}
-  {{ $paginator := .Paginate .Data.Pages }}
-
-  <main class="posts">
+  <main class="archive-page">
     <div class="content">
       {{ .Content }}
     </div>
 
-    {{ range $paginator.Pages.GroupByDate "2006" }}
-      <div class="posts-group main-wrapper">
+    {{ range (where .Site.RegularPages "Section" "posts").GroupByDate "2006" }}
+      <div class="archive-page-posts-group main-wrapper">
         <div class="main-box">
           <h2>{{ .Key }}</h2>
-          <ul class="posts-list">
+          <ul class="archive-page-posts-list">
             {{ range .Pages }}
               <li class="post-item">
                 <a href="{{ .RelPermalink }}">

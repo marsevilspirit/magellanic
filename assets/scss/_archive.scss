@@ -1,23 +1,17 @@
 // The posts-page should be synchronized with the home-page
-.posts-page {
-  padding-top: 4px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.posts {
+.archive-page {
   width: 100%;
   max-width: 1000px;
   text-align: left;
   padding: 20px;
   margin: 0 auto 20px;
 
-  &-group {
+  &-posts-group {
     display: flex;
     line-height: normal;
   }
 
-  &-list {
+  &-posts-list {
     flex-grow: 1;
     margin: 0;
     padding: 0;
