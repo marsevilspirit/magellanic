@@ -17,7 +17,7 @@ body {
   background-color: $background-color;
   margin: 0;
   padding: 0;
-  font-family: 'Futura', sans-serif;
+  font-family: "Futura", sans-serif;
   font-size: 1.2rem;
   line-height: 1.54;
   display: flex;
@@ -30,13 +30,19 @@ body {
 }
 
 /* Typography */
-h1, h2, h3 {
-  font-family: 'Futura', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Futura", sans-serif;
   font-style: italic;
   font-weight: bold;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   display: flex;
   align-items: center;
   line-height: 1.3;

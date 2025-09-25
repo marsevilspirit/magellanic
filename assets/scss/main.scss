@@ -4,27 +4,27 @@
 */
 
 /* Base Styles */
-@import 'normalize';
-@import 'prism';
+@import "normalize";
+@import "prism";
 
 /* Variables and Mixins */
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 /* Typography */
-@import 'fonts';
+@import "fonts";
 
 /* Base Styles */
-@import 'base';
+@import "base";
 
 /* Components */
-@import 'logo';
-@import 'header';
-@import 'menu';
-@import 'footer';
+@import "logo";
+@import "header";
+@import "menu";
+@import "footer";
 
 /* Pages */
-@import 'home';
-@import 'about';
-@import 'archive';
-@import 'post';
+@import "home";
+@import "about";
+@import "archive";
+@import "post";

@@ -1,12 +1,10 @@
 <nav class="menu">
-    <ul>
-        <!-- Iterate through the main menu items -->
-        {{ range .Site.Menus.main }}
-            <li>
-                <a href="{{ .URL | relLangURL }}">
-                    /{{ .Name }}
-                </a>
-            </li>
-        {{ end }}
-    </ul>
+  <ul>
+    <!-- Iterate through the main menu items -->
+    {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL | relLangURL }}"> /{{ .Name }} </a>
+      </li>
+    {{ end }}
+  </ul>
 </nav>

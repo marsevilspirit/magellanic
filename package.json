@@ -1,0 +1,25 @@
+{
+  "name": "magellanic",
+  "version": "1.0.0",
+  "description": "example website: [blog](https://blog.marsevilspirit.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marsevilspirit/magellanic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/marsevilspirit/magellanic/issues"
+  },
+  "homepage": "https://github.com/marsevilspirit/magellanic#readme",
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-go-template": "^0.0.15"
+  }
+}

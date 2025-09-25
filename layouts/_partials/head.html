@@ -1,16 +1,32 @@
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    {{ if .IsHome }}
+      {{ site.Title }}
+    {{ else }}
+      {{ printf "%s | %s" .Title
+        site.Title
+      }}
+    {{ end }}
+  </title>
+  <meta
+    name="description"
+    content="{{ with .Description }}
+      {{ . }}
+    {{ else }}
+      {{ with site.Params.description }}{{ . }}{{ end }}
+    {{ end }}"
+  />
 
   <!-- Font Awesome Icons -->
-  <link href="/fontawesome-6.7.2/css/fontawesome.min.css" rel="stylesheet">
-  <link href="/fontawesome-6.7.2/css/brands.min.css" rel="stylesheet">
-  <link href="/fontawesome-6.7.2/css/solid.min.css" rel="stylesheet">
+  <link href="/fontawesome-6.7.2/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="/fontawesome-6.7.2/css/brands.min.css" rel="stylesheet" />
+  <link href="/fontawesome-6.7.2/css/solid.min.css" rel="stylesheet" />
 
   <!-- Favicons -->
   {{ partial "favicons.html" . }}
+
 
   <!-- Styles and Scripts -->
   {{ partial "head/scss.html" . }}

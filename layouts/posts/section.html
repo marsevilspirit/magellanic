@@ -1,12 +1,11 @@
 {{ define "main" }}
   <main class="archive-page">
-    <div class="content">
-      {{ .Content }}
-    </div>
+    <div class="content">{{ .Content }}</div>
 
     {{ $pages := where .Site.RegularPages "Section" "posts" }}
-    {{ $groups := $pages.GroupByDate "2006" }}
-    
+    {{ $groups :=
+      $pages.GroupByDate "2006"
+    }}
     {{ if $groups }}
       {{ range $groups }}
         <div class="archive-page-posts-group main-wrapper">
@@ -20,9 +19,7 @@
                       {{- with .Draft }}<strong>DRAFT: &nbsp;</strong>{{ end -}}
                       {{ .Title }}
                     </span>
-                    <span class="post-day">
-                      {{ .Date.Format "Jan 2" }}
-                    </span>
+                    <span class="post-day"> {{ .Date.Format "Jan 2" }} </span>
                   </a>
                 </li>
               {{ end }}

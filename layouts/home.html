@@ -3,20 +3,28 @@
     <div class="home-page">
       {{ .Content }}
 
+
       <h2>Latest Posts:</h2>
       <!-- Display the latest 7 posts -->
       {{ $posts := where site.RegularPages "Type" "posts" }}
       {{ if $posts }}
         {{ range first 7 $posts }}
-          <div class="post on-list" onclick="location.href='{{ .RelPermalink }}'">
+          <div
+            class="post on-list"
+            onclick="location.href='{{ .RelPermalink }}'"
+          >
             <div class="post-row">
               <h3>
                 <a href="{{ .RelPermalink }}">
                   {{- with .Draft }}<strong>DRAFT: &nbsp;</strong>{{ end -}}
-                  {{ .Title | markdownify }}
+                  {{ .Title
+                    | markdownify
+                  }}
                 </a>
                 {{- with .Date -}}
-                  <small>{{ .Format ($.Site.Params.DateFormatList | default "2006-01-02") }}</small>
+                  <small
+                    >{{ .Format ($.Site.Params.DateFormatList | default "2006-01-02") }}</small
+                  >
                 {{- end -}}
               </h3>
               <div class="post-meta"></div>
