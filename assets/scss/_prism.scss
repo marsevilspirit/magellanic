@@ -11,7 +11,7 @@ pre[class*="language-"] {
   color: #ccc;
   background: none;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 1em;
+  font-size: 0.8em !important;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -29,11 +29,28 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
-/* Code blocks */
+/* Code blocks - centered container with symmetric side gaps */
+div.highlight {
+  width: calc(100% - 3em);
+  margin: 0.5em auto !important;
+}
+
+div.highlight pre,
+.highlight pre,
+.post pre[class*="language-"],
+.content pre[class*="language-"],
+main pre[class*="language-"],
 pre[class*="language-"] {
   padding: 1em;
-  margin: 0.5em 0;
+  margin: 0.5em 0 !important;
+  border-radius: 8px;
+  border: 1px solid #3a3a3a;
   overflow: auto;
+}
+
+/* Remove extra vertical gap inside centered container */
+div.highlight pre {
+  margin: 0 !important;
 }
 
 :not(pre) > code[class*="language-"],
