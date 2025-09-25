@@ -31,8 +31,9 @@ pre[class*="language-"] {
 
 /* Code blocks - centered container with symmetric side gaps */
 div.highlight {
-  width: calc(100% - 3em);
-  margin: 0.5em auto !important;
+  /* width: calc(100% - 3em); */
+  /* margin: 0.5em auto !important; */
+  margin: 0.5em 0 !important;
 }
 
 div.highlight pre,

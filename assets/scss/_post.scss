@@ -2,10 +2,9 @@
   width: 100%;
   max-width: 1000px;
   text-align: left;
-  padding: 10px;
-  padding-top: 0;
+  padding: 0 1.5em 20px;
   margin: 20px auto;
-  background-color: $header-background-color;
+  background-color: #fafafa;
 
   &.on-list {
     background: $header-background-color;
