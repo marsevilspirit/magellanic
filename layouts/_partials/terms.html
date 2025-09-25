@@ -2,7 +2,8 @@
   @context {page} page The current page. @context {string} taxonomy The taxonomy.
   @example: {{ partial "terms.html" (dict "taxonomy" "tags" "page" .)
 }}
-*/}} {{- $page := .page }}
+*/}}
+{{- $page := .page }}
 {{- $taxonomy := .taxonomy }}
 {{- with $page.GetTerms
   $taxonomy
