@@ -4,3 +4,200 @@
   max-width: 1000px;
   margin: auto;
 }
+
+// Hero Section
+.hero-section {
+  text-align: center;
+  padding: 2rem 0 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.hero-content {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+  line-height: 1.3;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #5a6c7d;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  
+  p {
+    margin-bottom: 0.6rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Posts Section
+.posts-section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.posts-list {
+  margin-bottom: 2rem;
+}
+
+// Post Items
+.post-item {
+  border-bottom: 1px dotted #bdc3c7;
+  padding: 0.8rem 0;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: #f8f9fa;
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 4px;
+  }
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.4rem;
+  gap: 1rem;
+}
+
+.post-title {
+  margin: 0;
+  flex: 1;
+  
+  a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    
+    &:hover {
+      color: #3498db;
+      text-decoration: underline;
+    }
+  }
+}
+
+.draft-label {
+  background: #e74c3c;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+}
+
+.post-date {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  font-weight: 400;
+  white-space: nowrap;
+  font-family: 'Courier New', monospace;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.tag {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: #3498db;
+  }
+}
+
+.no-posts {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 0.95rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .post-date {
+    font-size: 0.8rem;
+  }
+  
+  .post-item {
+    padding: 0.6rem 0;
+    
+    &:hover {
+      margin: 0 -0.5rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+}

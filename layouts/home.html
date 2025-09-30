@@ -1,39 +1,56 @@
 {{ define "main" }}
   <main role="main">
     <div class="home-page">
-      {{ .Content }}
-
-
-      <h2>Latest Posts:</h2>
-      <!-- Display the latest 7 posts -->
-      {{ $posts := where site.RegularPages "Type" "posts" }}
-      {{ if $posts }}
-        {{ range first 7 $posts }}
-          <div
-            class="post on-list"
-            onclick="location.href='{{ .RelPermalink }}'"
-          >
-            <div class="post-row">
-              <h3>
-                <a href="{{ .RelPermalink }}">
-                  {{- with .Draft }}<strong>DRAFT: &nbsp;</strong>{{ end -}}
-                  {{ .Title
-                    | markdownify
-                  }}
-                </a>
-                {{- with .Date -}}
-                  <small
-                    >{{ .Format ($.Site.Params.DateFormatList | default "2006-01-02") }}</small
-                  >
-                {{- end -}}
-              </h3>
-              <div class="post-meta"></div>
-            </div>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">{{ .Site.Params.author | default "Welcome" }}</h1>
+          <p class="hero-subtitle">{{ .Site.Params.description | default "A place for thoughts and ideas" }}</p>
+          <div class="hero-description">
+            {{ .Content }}
           </div>
+        </div>
+      </section>
+
+      <!-- Posts Section -->
+      <section class="posts-section">
+        <h2 class="section-title">
+          <i class="fas fa-file-text"></i> Latest Posts
+        </h2>
+        <!-- Display the latest 7 posts -->
+        {{ $posts := where site.RegularPages "Type" "posts" }}
+        {{ if $posts }}
+          <div class="posts-list">
+            {{ range first 7 $posts }}
+              <article class="post-item">
+                <header class="post-header">
+                  <h3 class="post-title">
+                    <a href="{{ .RelPermalink }}">
+                      {{- with .Draft }}<span class="draft-label">DRAFT</span>{{ end -}}
+                      {{ .Title | markdownify }}
+                    </a>
+                  </h3>
+                  {{- with .Date -}}
+                    <time class="post-date" datetime="{{ .Format "2006-01-02" }}">
+                      {{ .Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
+                    </time>
+                  {{- end -}}
+                </header>
+                
+                {{- if .Params.tags -}}
+                  <div class="post-tags">
+                    {{ range .Params.tags }}
+                      <span class="tag">#{{ . }}</span>
+                    {{ end }}
+                  </div>
+                {{- end -}}
+              </article>
+            {{ end }}
+          </div>
+        {{ else }}
+          <p class="no-posts">No posts found.</p>
         {{ end }}
-      {{ else }}
-        <p>No posts found.</p>
-      {{ end }}
+      </section>
     </div>
   </main>
 {{ end }}
