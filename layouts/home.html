@@ -4,8 +4,12 @@
       <!-- Hero Section -->
       <section class="hero-section">
         <div class="hero-content">
-          <h1 class="hero-title">{{ .Site.Params.author | default "Welcome" }}</h1>
-          <p class="hero-subtitle">{{ .Site.Params.description | default "A place for thoughts and ideas" }}</p>
+          <h1 class="hero-title">
+            {{ .Site.Params.author | default "Welcome" }}
+          </h1>
+          <p class="hero-subtitle">
+            {{ .Site.Params.description | default "A place for thoughts and ideas" }}
+          </p>
           <div class="hero-description">
             {{ .Content }}
           </div>
@@ -26,17 +30,22 @@
                 <header class="post-header">
                   <h3 class="post-title">
                     <a href="{{ .RelPermalink }}">
-                      {{- with .Draft }}<span class="draft-label">DRAFT</span>{{ end -}}
+                      {{- with .Draft }}
+                        <span class="draft-label">DRAFT</span>
+                      {{ end -}}
                       {{ .Title | markdownify }}
                     </a>
                   </h3>
                   {{- with .Date -}}
-                    <time class="post-date" datetime="{{ .Format "2006-01-02" }}">
+                    <time
+                      class="post-date"
+                      datetime="{{ .Format "2006-01-02" }}"
+                    >
                       {{ .Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
                     </time>
                   {{- end -}}
                 </header>
-                
+
                 {{- if .Params.tags -}}
                   <div class="post-tags">
                     {{ range .Params.tags }}
