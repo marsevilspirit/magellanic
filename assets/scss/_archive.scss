@@ -3,8 +3,8 @@
   width: 100%;
   max-width: 1000px;
   text-align: left;
-  padding: 20px;
-  margin: 0 auto 20px;
+  padding: 6px;
+  margin: 0 auto 6px;
 
   &-posts-group {
     display: flex;
@@ -16,28 +16,33 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    
+    li:last-child {
+      border-bottom: none;
+    }
   }
 
   .post {
     &-title {
       font-size: 1rem;
-      margin: 5px 0;
+      margin: 0;
+      line-height: 1.35;
     }
 
     &-item {
-      border-bottom: 1px grey dashed;
+      border-bottom: 1px #edf2f7 dotted;
 
       a {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        padding: 4px 10px;
+        padding: 3px 6px;
         text-decoration: none;
       }
     }
 
     &-day {
-      font-size: 1rem;
+      font-size: 0.9rem;
       flex-shrink: 0;
       margin-left: 1em;
       @include dimmed;
@@ -48,14 +53,38 @@
 .main-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 8px;
   width: 100%;
   text-align: left;
 }
 
 .main-box {
   background: $header-background-color;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px 0;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 4px 0;
+  
+  h2 {
+    margin: 0 0 6px 0;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .archive-page {
+    padding: 4px;
+    margin: 0 auto 4px;
+  }
+
+  .main-box {
+    padding: 8px;
+  }
+
+  .post-item a {
+    padding: 3px 6px;
+  }
+
+  .post-day {
+    font-size: 0.82rem;
+  }
 }
