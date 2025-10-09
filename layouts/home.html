@@ -1,64 +1,71 @@
 {{ define "main" }}
-  <main role="main">
+  <main role="main" class="home-main">
     <div class="home-page">
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            {{ .Site.Params.author | default "Welcome" }}
-          </h1>
-          <p class="hero-subtitle">
-            {{ .Site.Params.description | default "A place for thoughts and ideas" }}
-          </p>
-          <div class="hero-description">
-            {{ .Content }}
+      <section class="home-grid">
+        <aside class="persona">
+          <div class="avatar">
+            <img
+              src="{{ (.Site.Params.home.avatar | default "/favicon.png") | relURL }}"
+              alt="{{ .Site.Params.home.name | default .Site.Title }}"
+            />
           </div>
-        </div>
-      </section>
+          <div class="identity">
+            <h1 class="name">
+              {{ $name := (.Site.Params.home.name | default .Site.Title) }}
+              {{ $nh := (.Site.Params.home.nameHighlight | default "") }}
+              {{ if $nh }}
+                {{ $name | replace $nh (printf "<span class=\"name-hl\">%s</span>" $nh) | safeHTML }}
+              {{ else }}
+                {{ $name }}
+              {{ end }}
+            </h1>
+            <div class="role">
+              {{ .Site.Params.home.role | default "full-stack software engineer" }}
+            </div>
+            <p class="intro">
+              {{ $intro := (.Site.Params.home.intro | default "I seek meaning in systems, both digital and human.") }}
+              {{ $hl := (.Site.Params.home.introHighlight | default "seek meaning") }}
+              {{ $intro | replace $hl (printf "<span class=\"intro-hl\">%s</span>" $hl) | safeHTML }}
+            </p>
+          </div>
+        </aside>
 
-      <!-- Posts Section -->
-      <section class="posts-section">
-        <h2 class="section-title">
-          <i class="fas fa-file-text"></i> Latest Posts
-        </h2>
-        <!-- Display the latest 7 posts -->
-        {{ $posts := where site.RegularPages "Type" "posts" }}
-        {{ if $posts }}
-          <div class="posts-list">
-            {{ range first 7 $posts }}
-              <article class="post-item">
-                <header class="post-header">
-                  <h3 class="post-title">
-                    <a href="{{ .RelPermalink }}">
-                      {{- with .Draft }}
-                        <span class="draft-label">DRAFT</span>
-                      {{ end -}}
-                      {{ .Title | markdownify }}
-                    </a>
-                  </h3>
-                  {{- with .Date -}}
-                    <time
-                      class="post-date"
-                      datetime="{{ .Format "2006-01-02" }}"
-                    >
-                      {{ .Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
-                    </time>
-                  {{- end -}}
-                </header>
-
-                {{- if .Params.tags -}}
-                  <div class="post-tags">
-                    {{ range .Params.tags }}
-                      <span class="tag">#{{ . }}</span>
-                    {{ end }}
+        <section class="articles">
+          <h2 class="section-title">latest articles</h2>
+          {{ $posts := first 7 (where site.RegularPages "Type" "posts") }}
+          {{ if $posts }}
+            <ul class="article-list">
+              {{ range $posts }}
+                <li class="article">
+                  <div class="article-date">
+                    {{ $d := .Date }}
+                    <span class="day">{{ $d.Format "02" }}</span>
+                    <span class="month">{{ $d.Format "01" }}</span>
+                    <span class="year">{{ $d.Format "2006" }}</span>
                   </div>
-                {{- end -}}
-              </article>
-            {{ end }}
-          </div>
-        {{ else }}
-          <p class="no-posts">No posts found.</p>
-        {{ end }}
+                  <div class="article-body">
+                    {{ with .Params.tags }}
+                      <div class="tags">
+                        {{ range . }}
+                          <a class="tag-badge" href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">{{ . }}</a>
+                        {{ end }}
+                      </div>
+                    {{ end }}
+                    <h3 class="article-title">
+                      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+                    </h3>
+                    <p class="excerpt">{{ .Summary | plainify | truncate 180 }}</p>
+                  </div>
+                </li>
+              {{ end }}
+            </ul>
+            <div class="more">
+              <a class="btn-more" href="{{ "/posts/" | relURL }}">see more articles</a>
+            </div>
+          {{ else }}
+            <p class="no-posts">No posts found.</p>
+          {{ end }}
+        </section>
       </section>
     </div>
   </main>

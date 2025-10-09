@@ -27,6 +27,15 @@ title = "My New Hugo Site"
   logo = "logo"
   DateFormatList = "2006-01-02"
 
+  # Home hero/personal info
+  [Params.home]
+    avatar = "/favicon.png"  # Avatar image path
+    name = "author"  # Display name
+    nameHighlight = "author"  # Highlighted substring in name
+    role = "full-stack software engineer"  # Role/occupation
+    intro = "I seek meaning in systems, both digital and human."  # Intro text
+    introHighlight = "seek meaning"  # Highlighted phrase within intro
+
   [[Params.social]]
     name = "github"
     url = "https://github.com"
