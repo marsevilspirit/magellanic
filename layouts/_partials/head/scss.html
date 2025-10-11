@@ -1,15 +1,20 @@
 <!-- toCSS make SCSS to CSS -->
+<!-- Note: Main stylesheet is preloaded in preload.html for better performance -->
 {{- with resources.Get "scss/main.scss" | toCSS }}
   {{- if hugo.IsDevelopment }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    <!-- Development mode: fallback for browsers without preload support -->
+    <noscript><link rel="stylesheet" href="{{ .RelPermalink }}" /></noscript>
   {{- else }}
     {{- with . | minify | fingerprint }}
-      <link
-        rel="stylesheet"
-        href="{{ .RelPermalink }}"
-        integrity="{{ .Data.Integrity }}"
-        crossorigin="anonymous"
-      />
+      <!-- Production mode: fallback for browsers without preload support -->
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="{{ .RelPermalink }}"
+          integrity="{{ .Data.Integrity }}"
+          crossorigin="anonymous"
+        />
+      </noscript>
     {{- end }}
   {{- end }}
 {{- end }}

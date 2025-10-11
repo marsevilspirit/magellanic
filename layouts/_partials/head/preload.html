@@ -1,0 +1,49 @@
+<!-- Critical Resource Preloads and Preconnects -->
+
+<!-- Preconnect to external font domains (if any external fonts are used) -->
+{{- if site.Params.fonts.external }}
+  {{- range site.Params.fonts.external }}
+    <link rel="preconnect" href="{{ . }}" crossorigin>
+    <link rel="dns-prefetch" href="{{ . }}">
+  {{- end }}
+{{- end }}
+
+<!-- Preconnect to Font Awesome CDN if using external version -->
+{{- if site.Params.fontawesome.external }}
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+{{- end }}
+
+<!-- Preload main stylesheet with non-blocking loading -->
+{{- with resources.Get "scss/main.scss" | toCSS }}
+  {{- if hugo.IsDevelopment }}
+    <link rel="preload" href="{{ .RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="preload" href="{{ .RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+<!-- Preload critical self-hosted fonts -->
+{{- $fontPath := "/fonts/Futura/" }}
+{{- $fonts := slice 
+  (dict "file" "Futura Book font.ttf" "weight" "normal" "style" "normal" "priority" true)
+  (dict "file" "Futura Heavy font.ttf" "weight" "bold" "style" "normal" "priority" true)
+  (dict "file" "Futura Book Italic font.ttf" "weight" "normal" "style" "italic" "priority" false)
+  (dict "file" "Futura Heavy Italic font.ttf" "weight" "bold" "style" "italic" "priority" false)
+}}
+
+{{- range $fonts }}
+  {{- if .priority }}
+    <!-- High priority fonts (normal and bold) -->
+    <link rel="preload" href="{{ $fontPath }}{{ .file }}" as="font" type="font/ttf" crossorigin="anonymous">
+  {{- else }}
+    <!-- Lower priority fonts (italics) - preload but with lower priority -->
+    <link rel="preload" href="{{ $fontPath }}{{ .file }}" as="font" type="font/ttf" crossorigin="anonymous">
+  {{- end }}
+{{- end }}
+
+<!-- Preload Font Awesome CSS with non-blocking loading -->
+<link rel="preload" href="/fontawesome-6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/fontawesome-6.7.2/css/all.min.css"></noscript>

@@ -19,12 +19,11 @@
     {{ end }}"
   />
 
-  <!-- Font Awesome Icons -->
-  <link href="/fontawesome-6.7.2/css/all.min.css" rel="stylesheet" />
+  <!-- Critical Resource Preloads and Preconnects -->
+  {{ partial "head/preload.html" . }}
 
   <!-- Favicons -->
   {{ partial "favicons.html" . }}
-
 
   <!-- Styles and Scripts -->
   {{ partial "head/scss.html" . }}
