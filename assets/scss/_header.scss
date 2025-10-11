@@ -4,7 +4,7 @@
   justify-content: center;
   position: relative;
   padding: 10px 0;
-  background: $header-background-color;
+  background: transparent; // match page background (let body/background show through)
   z-index: 5;
 
   &__inner {
