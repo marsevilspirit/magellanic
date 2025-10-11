@@ -32,35 +32,43 @@
 
         <section class="articles">
           <h2 class="section-title">latest articles</h2>
-          {{ $posts := first 7 (where site.RegularPages "Type" "posts") }}
+          {{ $posts := first 7 (where site.RegularPages "Section" "posts") }}
           {{ if $posts }}
             <ul class="article-list">
               {{ range $posts }}
                 <li class="article">
-                  <div class="article-date">
-                    {{ $d := .Date }}
-                    <span class="day">{{ $d.Format "02" }}</span>
-                    <span class="month">{{ $d.Format "01" }}</span>
-                    <span class="year">{{ $d.Format "2006" }}</span>
-                  </div>
-                  <div class="article-body">
-                    {{ with .Params.tags }}
-                      <div class="tags">
-                        {{ range . }}
-                          <a class="tag-badge" href="{{ (printf "/tags/%s/" (. | urlize)) | relURL }}">{{ . }}</a>
-                        {{ end }}
+                  <a href="{{ .RelPermalink }}" class="article-link">
+                    <div class="article-date">
+                      {{ $d := .Date }}
+                      <div class="day-month">
+                        <span class="day">{{ $d.Format "02" }}</span>
+                        <span class="month">{{ $d.Format "01" }}</span>
                       </div>
-                    {{ end }}
-                    <h3 class="article-title">
-                      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-                    </h3>
-                    <p class="excerpt">{{ .Summary | plainify | truncate 180 }}</p>
-                  </div>
+                      <span class="year">{{ $d.Format "2006" }}</span>
+                    </div>
+                    <div class="article-body">
+                      {{ with .Params.tags }}
+                        <div class="tags">
+                          {{ range . }}
+                            <span class="tag-link">#{{ . }}</span>
+                          {{ end }}
+                        </div>
+                      {{ end }}
+                      <h3 class="article-title">
+                        {{ .Title | markdownify }}
+                      </h3>
+                      <p class="excerpt">
+                        {{ .Summary | plainify | truncate 180 }}
+                      </p>
+                    </div>
+                  </a>
                 </li>
               {{ end }}
             </ul>
             <div class="more">
-              <a class="btn-more" href="{{ "/posts/" | relURL }}">see more articles</a>
+              <a class="btn-more" href="{{ "/posts/" | relURL }}"
+                >see more articles <span aria-hidden="true">›</span></a
+              >
             </div>
           {{ else }}
             <p class="no-posts">No posts found.</p>

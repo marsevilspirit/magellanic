@@ -5,8 +5,6 @@
   margin: auto;
 }
 
-
-
 // New Home Grid
 .home-grid {
   display: grid;
@@ -27,7 +25,8 @@
 }
 
 // Ensure left-aligned persona block like marma.dev
-.persona, .identity {
+.persona,
+.identity {
   text-align: left;
 }
 
@@ -143,10 +142,6 @@
 }
 
 .article {
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 18px;
-  padding: 10px 8px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
@@ -159,27 +154,57 @@
   background: rgba(255, 255, 255, 0.9);
 }
 
-.article-date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-  color: #6b7a86;
-  font-family: "Courier New", monospace;
+.article-link {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 6px; // almost flush to content
+  padding: 10px 8px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
 }
 
-.article-date .day,
+.article-date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px; // very tight gap between day/month block and year
+  padding: 0;
+  color: #6b7a86;
+  font-family: "Futura", sans-serif;
+}
+
+.article-date .day-month {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.article-date .day {
+  font-weight: 700;
+  font-size: 1.3rem; // larger to better align with year height
+  line-height: 1;
+  margin: 0;
+  color: #2b3a42;
+}
+
 .article-date .month {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.3rem; // larger to better align with year height
+  line-height: 1;
+  margin: 0;
+  margin-top: -2px; // pull month up to eliminate gap
+  color: #1aa883;
 }
 
 .article-date .year {
-  font-size: 0.7rem;
-  opacity: 0.8;
+  transform: rotate(0deg); // no rotation, normal upward direction
   writing-mode: vertical-rl;
-  transform: rotate(180deg); // vertical upwards
+  font-size: 1rem; // larger to match the combined height of day+month
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: rgba(43, 58, 66, 0.7);
 }
 
 .article-body {
@@ -204,19 +229,23 @@
   border: 1px solid rgba(26, 168, 131, 0.18);
 }
 
+// Text-style tag links like marma.dev
+.tag-link {
+  display: inline-block;
+  color: #1aa883;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.tag-link:hover {
+  text-decoration: underline;
+}
+
 .article-title {
   margin: 0;
   font-size: 1.1rem;
-}
-
-.article-title a {
   color: #2b3a42;
-  text-decoration: none;
-}
-
-.article-title a:hover {
-  color: #1aa883;
-  text-decoration: underline;
 }
 
 .excerpt {
@@ -234,14 +263,17 @@
   display: inline-block;
   padding: 12px 14px;
   border-radius: 8px;
-  border: 1px solid rgba(26, 168, 131, 0.25);
+  border: 1px solid #1aa883;
   color: #1aa883;
   text-decoration: none;
-  background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(240,250,248,0.8));
+  background: #f8f9fa;
+  transition: all 0.2s ease;
 }
 
 .btn-more:hover {
-  background: linear-gradient(180deg, rgba(240,250,248,0.9), rgba(225,245,240,0.9));
+  border-color: #16a085;
+  color: #16a085;
+  transform: translateY(-1px);
 }
 
 .section-title {
