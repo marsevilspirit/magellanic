@@ -5,6 +5,8 @@
   margin: auto;
 }
 
+// Home page animations are now controlled by JavaScript and CSS transitions
+
 // New Home Grid
 .home-grid {
   display: grid;
@@ -22,6 +24,16 @@
   gap: 12px;
   align-items: start;
   justify-items: start;
+  
+  // Initial state for animation
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 // Ensure left-aligned persona block like marma.dev
@@ -32,6 +44,14 @@
 
 .avatar {
   margin-top: 120px;
+  
+  // Initial state for animation
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+  
+  &.animate {
+    opacity: 1;
+  }
 }
 
 .avatar img {
@@ -45,6 +65,16 @@
 .identity {
   display: grid;
   gap: 6px;
+  
+  // Initial state for animation
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .identity .name {
@@ -126,11 +156,31 @@
 // Articles (right)
 .articles {
   position: relative;
+  
+  // Initial state for animation
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .articles .section-title {
   text-transform: lowercase;
   color: #1aa883;
+  
+  // Initial state for animation
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .article-list {
@@ -141,11 +191,22 @@
   gap: 18px;
 }
 
+// Individual article animations with staggered delays
 .article {
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
   background: rgba(250, 252, 253, 0.6);
+  
+  // Initial state for animation
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .article:hover {
@@ -257,22 +318,30 @@
 .more {
   text-align: right;
   margin-top: 8px;
+  
+  // Initial state for animation
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+  
+  &.animate {
+    opacity: 1;
+  }
 }
 
 .btn-more {
   display: inline-block;
-  padding: 12px 14px;
+  padding: 2px 4px;
   border-radius: 8px;
-  border: 1px solid #1aa883;
-  color: #1aa883;
+  border: 1px solid #115044;
+  color: #115044;
   text-decoration: none;
   background: #f8f9fa;
   transition: all 0.2s ease;
 }
 
 .btn-more:hover {
-  border-color: #16a085;
-  color: #16a085;
+  border-color: #0d3d33;
+  color: #0d3d33;
   transform: translateY(-1px);
 }
 

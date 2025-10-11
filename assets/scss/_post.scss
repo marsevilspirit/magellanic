@@ -4,7 +4,7 @@
   text-align: left;
   padding: 0 1.5em 20px;
   margin: 20px auto;
-  background-color: #fafafa;
+  background: transparent;
 
   &.on-list {
     background: $header-background-color;
@@ -27,7 +27,7 @@
 }
 
 .post.on-list h3 {
-  font-size: 16px;
+  font-size: 1.3rem;    /* Adjusted list page title size to maintain hierarchy */
   width: 100%;
 
   margin-top: 0;
