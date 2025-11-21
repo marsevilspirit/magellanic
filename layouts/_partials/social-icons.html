@@ -1,11 +1,6 @@
 {{- range . }}
-  <li>
-    <a
-      class="icon fa-brands fa-{{ .name }}"
-      href="{{ .url }}"
-      target="_blank"
-      rel="noopener"
-      title="{{ .name }}"
-    ></a>
-  </li>
+<li>
+  <a class="icon {{ if eq .name " email" }}fa-solid fa-envelope{{ else }}fa-brands fa-{{ .name }}{{ end }}"
+    href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name }}"></a>
+</li>
 {{- end }}

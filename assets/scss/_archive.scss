@@ -64,9 +64,14 @@
   padding: 10px;
   margin: 4px 0;
 
+  // Animation
+  // Handled by AOS
+
+
   h2 {
     margin: 0 0 6px 0;
-    font-size: 1.5rem; /* Adjusted to match global h2 hierarchy */
+    font-size: 1.5rem;
+    /* Adjusted to match global h2 hierarchy */
   }
 }
 

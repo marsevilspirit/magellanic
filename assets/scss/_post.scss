@@ -6,6 +6,10 @@
   margin: 20px auto;
   background: transparent;
 
+  // Animation
+  // Handled by AOS
+
+
   &.on-list {
     background: $header-background-color;
     cursor: pointer;
@@ -27,7 +31,8 @@
 }
 
 .post.on-list h3 {
-  font-size: 1.3rem; /* Adjusted list page title size to maintain hierarchy */
+  font-size: 1.3rem;
+  /* Adjusted list page title size to maintain hierarchy */
   width: 100%;
 
   margin-top: 0;

@@ -26,16 +26,7 @@
   justify-items: start;
 
   // Initial state for animation
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out;
-
-  &.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  // Handled by AOS
 }
 
 // Ensure left-aligned persona block like marma.dev
@@ -48,12 +39,7 @@
   margin-top: 120px;
 
   // Initial state for animation
-  opacity: 0;
-  transition: opacity 0.6s ease-out;
-
-  &.animate {
-    opacity: 1;
-  }
+  // Handled by AOS
 }
 
 .avatar img {
@@ -69,16 +55,7 @@
   gap: 6px;
 
   // Initial state for animation
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out;
-
-  &.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  // Handled by AOS
 }
 
 .identity .name {
@@ -162,16 +139,7 @@
   position: relative;
 
   // Initial state for animation
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out;
-
-  &.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  // Handled by AOS
 }
 
 .articles .section-title {
@@ -179,16 +147,7 @@
   color: #1aa883;
 
   // Initial state for animation
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
-
-  &.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  // Handled by AOS
 }
 
 .article-list {
@@ -207,22 +166,15 @@
   background: rgba(250, 252, 253, 0.6);
 
   // Initial state for animation
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
-
-  &.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  // Handled by AOS
+  // Add transition for hover effects too
+  transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .article:hover {
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
-  transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .article-link {
@@ -330,29 +282,32 @@
   margin-top: 8px;
 
   // Initial state for animation
-  opacity: 0;
-  transition: opacity 0.6s ease-out;
-
-  &.animate {
-    opacity: 1;
-  }
+  // Handled by AOS
 }
 
 .btn-more {
-  display: inline-block;
-  padding: 2px 4px;
-  border-radius: 8px;
-  border: 1px solid #115044;
-  color: #115044;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  color: #1aa883;
   text-decoration: none;
-  background: #f8f9fa;
-  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+
+  span {
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    display: inline-block;
+  }
 }
 
 .btn-more:hover {
-  border-color: #0d3d33;
-  color: #0d3d33;
-  transform: translateY(-1px);
+  color: #115044;
+
+  span {
+    transform: translateX(4px);
+  }
 }
 
 .section-title {

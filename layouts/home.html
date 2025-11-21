@@ -2,14 +2,14 @@
   <main role="main" class="home-main">
     <div class="home-page">
       <section class="home-grid">
-        <aside class="persona">
+        <aside class="persona" data-aos="fade-up" data-aos-delay="0">
           <div class="avatar">
             <img
               src="{{ (.Site.Params.home.avatar | default "/favicon.png") | relURL }}"
               alt="{{ .Site.Params.home.name | default .Site.Title }}"
             />
           </div>
-          <div class="identity">
+          <div class="identity" data-aos="fade-up" data-aos-delay="100">
             <h1 class="name">
               {{ $name := (.Site.Params.home.name | default .Site.Title) }}
               {{ $nh := (.Site.Params.home.nameHighlight | default "") }}
@@ -30,13 +30,13 @@
           </div>
         </aside>
 
-        <section class="articles">
+        <section class="articles" data-aos="fade-up" data-aos-delay="200">
           <h2 class="section-title">latest articles</h2>
           {{ $posts := first 7 (where site.RegularPages "Section" "posts") }}
           {{ if $posts }}
             <ul class="article-list">
-              {{ range $posts }}
-                <li class="article">
+              {{ range $index, $element := $posts }}
+                <li class="article" data-aos="fade-up" data-aos-delay="{{ mul $index 100 }}">
                   <a href="{{ .RelPermalink }}" class="article-link">
                     <div class="article-date">
                       {{ $d := .Date }}
@@ -65,7 +65,7 @@
                 </li>
               {{ end }}
             </ul>
-            <div class="more">
+            <div class="more" data-aos="fade-up" data-aos-delay="400">
               <a class="btn-more" href="{{ "/posts/" | relURL }}"
                 >see more posts <span aria-hidden="true">›</span></a
               >

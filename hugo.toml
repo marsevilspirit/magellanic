@@ -8,38 +8,48 @@ licenselink = "https://github.com/marsevilspirit/magellanic/blob/main/LICENSE"
 title = "My New Hugo Site"
 
 [module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.146.0"
+[module.hugoVersion]
+extended = true
+min = "0.146.0"
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "node_modules"
+target = "assets/_npm"
 
 [menus]
-  [[menus.main]]
-    name = "posts"
-    pageRef = "/posts"
-    weight = 1
+[[menus.main]]
+name = "posts"
+pageRef = "/posts"
+weight = 1
 
-  [[menus.main]]
-    name = "about"
-    pageRef = "/about"
-    weight = 2
+[[menus.main]]
+name = "about"
+pageRef = "/about"
+weight = 2
 
 [Params]
-  logo = "logo"
-  DateFormatList = "2006-01-02"
+logo = "logo"
+DateFormatList = "2006-01-02"
 
-  # Home hero/personal info
-  [Params.home]
-    avatar = "/favicon.png"  # Avatar image path
-    name = "author"  # Display name
-    nameHighlight = "author"  # Highlighted substring in name
-    role = "full-stack software engineer"  # Role/occupation
-    intro = "I seek meaning in systems, both digital and human."  # Intro text
-    introHighlight = "seek meaning"  # Highlighted phrase within intro
+# Home hero/personal info
+[Params.home]
+avatar = "/favicon.png"                                      # Avatar image path
+name = "author"                                              # Display name
+nameHighlight = "author"                                     # Highlighted substring in name
+role = "full-stack software engineer"                        # Role/occupation
+intro = "I seek meaning in systems, both digital and human." # Intro text
+introHighlight = "seek meaning"                              # Highlighted phrase within intro
 
-  [[Params.social]]
-    name = "github"
-    url = "https://github.com"
+[[Params.social]]
+name = "github"
+url = "https://github.com"
 
-  [[Params.social]]
-    name = "mastodon"
-    url = "https://infosec.exchange/@marsevilspirit"
+[[Params.social]]
+name = "mastodon"
+url = "https://infosec.exchange/@marsevilspirit"
+
+[[Params.social]]
+name = "email"
+url = "mailto:marsevilspirit@gmail.com"

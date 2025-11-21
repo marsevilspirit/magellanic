@@ -1,16 +1,12 @@
-<footer>
+<footer class="footer" data-aos="fade-up" data-aos-offset="10">
   <div class="footer__inner">
     <ul class="icons">
       {{- with site.Params.social }}
-        {{ partial "social-icons.html" . }}
+      {{ partial "social-icons.html" . }}
       {{- end }}
       <li>
-        <a
-          href="{{ "posts/index.xml" | absLangURL }}"
-          target="_blank"
-          title="RSS Feed"
-          class="icon fa-solid fa-rss"
-        ></a>
+        <a href="{{ " posts/index.xml" | absLangURL }}" target="_blank" title="RSS Feed"
+          class="icon fa-solid fa-rss"></a>
       </li>
     </ul>
   </div>

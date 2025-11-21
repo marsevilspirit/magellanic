@@ -3,6 +3,11 @@
   flex-grow: 0;
   z-index: 4;
 
+  // Animation
+  // Handled by AOS
+
+
+
   &__inner {
     display: flex;
     align-items: center;
@@ -19,12 +24,12 @@
     align-items: center;
     font-size: 1rem;
 
-    & > *:not(:last-child)::after {
+    &>*:not(:last-child)::after {
       content: "•";
       padding: 0 5px;
     }
 
-    & > *:last-child {
+    &>*:last-child {
       padding: 0;
     }
   }
